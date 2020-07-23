@@ -16,7 +16,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-
+@DisplayName("When runnung MathUtils")
 class MathUtilsTest {
 	
 	@BeforeAll
@@ -59,11 +59,11 @@ class MathUtilsTest {
 		@Test
 		@DisplayName("when adding two positive numbers")
 		void testAddpositive() {
-			assertEquals(2, mathUtils.add(1, 1), "Should reutnr the right sum");
+			assertEquals(2, mathUtils.add(1, 1), "should return the right sum");
 		}
 		
 		@Test
-		@DisplayName("when addin two positive numbers")
+		@DisplayName("when adding two negative numbers")
 		void testAddNegative() {
 			assertEquals(-2, mathUtils.add(-1, -1), "should return the right sum");
 		}

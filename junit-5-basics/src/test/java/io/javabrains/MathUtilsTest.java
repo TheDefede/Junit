@@ -16,7 +16,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.TestReporter;
 
 @DisplayName("When runnung MathUtils")
 class MathUtilsTest {
@@ -27,9 +30,13 @@ class MathUtilsTest {
 	}
 	
 	MathUtils mathUtils;
+	TestInfo testInfo;
+	TestReporter testReporter;
 	
 	@BeforeEach
-	void init(){
+	void init(TestInfo testInfo, TestReporter testReporter){
+		this.testInfo = testInfo;
+		this.testReporter = testReporter;
 		mathUtils = new MathUtils();
 	}
 	
@@ -56,6 +63,7 @@ class MathUtilsTest {
 	
 	@Nested
 	@DisplayName("add method")
+	@Tag("Math")
 	class Addtest{
 		
 		@Test
@@ -71,10 +79,10 @@ class MathUtilsTest {
 		void testAddNegative() {
 			assertEquals(-2, mathUtils.add(-1, -1), "should return the right sum");
 		}
-		
 	}
 	
 	@Test
+	@Tag("Math")
 	@DisplayName("Circle Radius Method")
 	void tesComputeCircleRadius() {
 		
@@ -83,6 +91,7 @@ class MathUtilsTest {
 	}
 	
 	@RepeatedTest(3)
+	@Tag("Circle")
 	@DisplayName("Divide Method")
 	void testDivide(RepetitionInfo repetitionInfo) {
 		repetitionInfo.getCurrentRepetition();
@@ -91,8 +100,10 @@ class MathUtilsTest {
 	}
 	
 	@Test
+	@Tag("Math")
 	@DisplayName("multiply method")
 	void testMultiply() {
+		System.out.println("Running " + testInfo.getDisplayName() + " with tags " + testInfo.getTags());
 		assertEquals(4, mathUtils.multiply(2, 2),"should return the right product");
 		assertAll(
 				()-> assertEquals(4, mathUtils.multiply(2, 2)),

@@ -7,6 +7,11 @@ public class MathUtils {
 		return a+b;
 	}
 	
+	public double conputeCircleArea(double radius) {
+		
+		
+		return Math.PI * Math.pow(radius, 2);
+	}
 	
 
 }

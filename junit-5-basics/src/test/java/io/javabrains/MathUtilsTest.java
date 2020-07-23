@@ -59,7 +59,9 @@ class MathUtilsTest {
 		@Test
 		@DisplayName("when adding two positive numbers")
 		void testAddpositive() {
-			assertEquals(2, mathUtils.add(1, 1), "should return the right sum");
+			int expected = 2;
+			int actual= mathUtils.add(1, 1);
+			assertEquals(expected, actual, ()-> "should return " + expected + "but returned " + actual);
 		}
 		
 		@Test

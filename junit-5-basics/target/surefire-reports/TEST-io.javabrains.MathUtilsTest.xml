@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.javabrains.MathUtilsTest" time="0.02" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.javabrains.MathUtilsTest" time="0.285" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\GLBootCamp\app\java\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\fedem\AppData\Local\Temp\surefire5709738152520060523\surefirebooter1006662127284012961.jar C:\Users\fedem\AppData\Local\Temp\surefire5709738152520060523 2020-07-23T14-02-26_434-jvmRun1 surefire3960627670840399412tmp surefire_05438437903261825437tmp"/>
+    <property name="sun.java.command" value="C:\Users\fedem\AppData\Local\Temp\surefire6155947651084619305\surefirebooter3622530903049370313.jar C:\Users\fedem\AppData\Local\Temp\surefire6155947651084619305 2020-07-23T14-10-30_181-jvmRun1 surefire8207071524291678995tmp surefire_05200109017748570391tmp"/>
     <property name="surefire.test.class.path" value="C:\GLBootCamp\Junit\junit-5-basics\target\test-classes;C:\GLBootCamp\Junit\junit-5-basics\target\classes;C:\Users\fedem\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.0\junit-jupiter-engine-5.4.0.jar;C:\Users\fedem\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\fedem\.m2\repository\org\junit\platform\junit-platform-engine\1.4.0\junit-platform-engine-1.4.0.jar;C:\Users\fedem\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.0\junit-jupiter-api-5.4.0.jar;C:\Users\fedem\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\fedem\.m2\repository\org\junit\platform\junit-platform-commons\1.4.0\junit-platform-commons-1.4.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\fedem"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\fedem\AppData\Local\Temp\surefire5709738152520060523\surefirebooter1006662127284012961.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\fedem\AppData\Local\Temp\surefire6155947651084619305\surefirebooter3622530903049370313.jar"/>
     <property name="sun.boot.class.path" value="C:\GLBootCamp\app\java\jre\lib\resources.jar;C:\GLBootCamp\app\java\jre\lib\rt.jar;C:\GLBootCamp\app\java\jre\lib\sunrsasign.jar;C:\GLBootCamp\app\java\jre\lib\jsse.jar;C:\GLBootCamp\app\java\jre\lib\jce.jar;C:\GLBootCamp\app\java\jre\lib\charsets.jar;C:\GLBootCamp\app\java\jre\lib\jfr.jar;C:\GLBootCamp\app\java\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,6 +61,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testAdd" classname="io.javabrains.MathUtilsTest" time="0.01"/>
+  <testcase name="testAdd" classname="io.javabrains.MathUtilsTest" time="0.009"/>
   <testcase name="tesComputeCircleRadius" classname="io.javabrains.MathUtilsTest" time="0.001"/>
+  <testcase name="testDivide" classname="io.javabrains.MathUtilsTest" time="0.27"/>
 </testsuite>

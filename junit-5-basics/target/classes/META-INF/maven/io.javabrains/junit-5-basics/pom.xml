@@ -35,6 +35,15 @@
     
   </dependencies>
   
+  <build>
+  	<plugins>
+  		<plugin>
+	  		<artifactId>maven-surefire-plugin</artifactId><!-- for maven console -->
+  			<version>2.22.1</version>
+  		</plugin>
+  	</plugins>
+  </build>
+  
 
   
   

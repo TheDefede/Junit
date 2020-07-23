@@ -2,6 +2,7 @@ package io.javabrains;
 
 
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 
@@ -38,6 +40,8 @@ class MathUtilsTest {
 	@DisplayName("Testing add method")	
 	void testAdd() {
 		
+		
+		
 		boolean isServerUp = false;
 		
 		assumeTrue(isServerUp);
@@ -46,6 +50,24 @@ class MathUtilsTest {
 		int actual = mathUtils.add(5, 5);	
 		
 		assertEquals(expected, actual, "The add method should add tow numbers");		
+	}
+	
+	@Nested
+	@DisplayName("add method")
+	class Addtest{
+		
+		@Test
+		@DisplayName("when adding two positive numbers")
+		void testAddpositive() {
+			assertEquals(2, mathUtils.add(1, 1), "Should reutnr the right sum");
+		}
+		
+		@Test
+		@DisplayName("when addin two positive numbers")
+		void testAddNegative() {
+			assertEquals(-2, mathUtils.add(-1, -1), "should return the right sum");
+		}
+		
 	}
 	
 	@Test
@@ -64,10 +86,25 @@ class MathUtilsTest {
 	}
 	
 	@Test
+	@DisplayName("multiply method")
+	void testMultiply() {
+		assertEquals(4, mathUtils.multiply(2, 2),"should return the right product");
+		assertAll(
+				()-> assertEquals(4, mathUtils.multiply(2, 2)),
+				()-> assertEquals(0, mathUtils.multiply(-2, 0)),
+				()-> assertEquals(6, mathUtils.multiply(3, 2)),
+				()-> assertEquals(10, mathUtils.multiply(2, 5)),
+				()-> assertEquals(6, mathUtils.multiply(2, 3))
+				);		
+	}
+	
+	@Test
 	@Disabled
 	@DisplayName("TDD method disabled")
 	void testDisabled() {
 		fail("This test sould be disabled");
 	}
+	
+
  
 }

@@ -14,6 +14,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("When runnung MathUtils")
@@ -80,9 +82,10 @@ class MathUtilsTest {
 				"Should return right circle area");		
 	}
 	
-	@Test
+	@RepeatedTest(3)
 	@DisplayName("Divide Method")
-	void testDivide() {		
+	void testDivide(RepetitionInfo repetitionInfo) {
+		repetitionInfo.getCurrentRepetition();
 		assertThrows(ArithmeticException.class, ()-> mathUtils.divide(1, 0), "Divide by  zero should throw");
 
 	}
